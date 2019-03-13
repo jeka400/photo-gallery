@@ -1,0 +1,832 @@
+
+
+/*  ====================================================        General       ======================================================== */
+.hidden {
+    display: none !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+/*  ====================================================        Nav Btns       ======================================================== */
+.navBar {
+    width: 150px;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 600;
+}
+
+.search-btn {
+    width: 50%;
+    height: 100%;
+    background-color: #323232;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 300 !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.search-btn > span {
+    display: grid;
+    align-items: center;
+}
+
+.navBar-toggler {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    color: #323232;
+    background-color: white;
+    padding-top: 17px;
+    padding-left: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.navBar-inner {
+    position: relative;
+    width: 40px;
+    height: 31px;
+    padding-top: 14px;
+    cursor: pointer;
+    display: block;
+}
+
+.bar-inner {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+.bar-inner::before {
+    top: 0;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    left: 0;
+}
+
+.bar-inner::after {
+    bottom: 0;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: black;
+    left: 0;
+}
+
+/*  =================================================        Nav Collapse        ======================================================== */
+.collapse {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+}
+
+.close-btn {
+    position: absolute;
+    border: 1px solid #a9a9a9;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    right: 25px;
+    top: 10px;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    padding-left: 54px;
+    padding-top: 38px;
+    margin-bottom: 84px;
+    display: block;
+}
+
+.menu-icon {
+    padding-left: 63px;
+    margin-bottom: 29px;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin-bottom: 65px;
+}
+
+.nav-link {
+    padding-left: 63px !important;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #323232;
+    display: inline-block;              /* very important, for border bottom after we need, bcs then a width is not full 100% line with */
+}
+
+li.active a {
+    border-bottom: 2px solid #000000;
+}
+
+/*  ====================================================        Intro       ======================================================== */
+.introHome-item{
+    /* width: 100%; */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.introHome-item-1 {
+    background-image: url('img/slider-bg-1.jpg');
+}
+.introHome-item-2 {
+    background-image: url('img/slider-bg-2.jpg');
+}
+
+.introHome-item >.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-box {
+    padding: 10px 30px 20px;
+    background: white; 
+    text-align: center;
+}
+
+.intro-box > p:first-child {
+    color: #898d90;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.intro-box > h1 {
+    margin-bottom: 10px;
+    font-size: 38px;
+    color: #323232;
+    font-weight: 400;
+}
+
+.intro-box > p:nth-child(3) {
+    margin-bottom: 10px;
+    color: #898d90;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.readMore-link {
+    border: 2px solid #000000;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    color: #323232;
+    font-weight: 700;
+    padding: 15px 28px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/*  ====================================================        Slider arrows       ======================================================== */
+#slider-arrows {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: 500;
+    width: 180px;
+    height: 60px;
+}
+
+.left-arrow {
+    width: 50%;
+    height: 100%;
+    background: #323232;
+    display: grid;
+    justify-content: center;
+    z-index: 4;
+}
+.left-arrow > span {
+    display: flex;
+    align-items:  center;
+}
+
+.right-arrow {
+    width: 50%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+}
+.right-arrow > span {
+    display: flex;
+    align-items:  center;
+}
+
+/*  ====================================================        Carousel add       =================================================== */
+.carousel {
+    height: 100vh;
+}
+.carousel > div,
+.carousel > div > div,
+.carousel > div > div > img
+ {
+    height: 100%;
+}
+
+.carousel > div > div > img {
+    object-fit: cover;                  /* da bi slika u full width i height od parenta ipak bila respose */
+}
+
+/*  ====================================================        Pagination       =================================================== */
+.pagination {
+    width: 111px;
+    height: 88px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 500;
+    font-weight: 700;
+    background: white;
+    color: #898d90;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.page {
+    font-size: 30px;
+    color: #323232;
+}
+
+.pages {
+    margin-top: 14px;
+}
+
+
+/*  ====================================================        Media Query       ======================================================== */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .pagination {
+        display: none !important;
+    }
+
+    .carousel-caption {
+        right: 0;
+        left: 0;
+    }
+}
+/* Medium and small devices (smaller than 992px) */
+@media (max-width: 991.98px) {
+    .nextProject-box {
+        display: none;
+    }
+}
+/* Large devices (bigger than 992px) */
+@media (min-width: 992px) { 
+    .search-btn,
+    .navBar-toggler,
+    .close-btn {
+        display: none !important;
+    }
+
+    .collapse {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 300px;
+        background: white;
+    }
+
+    .main {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: calc(100% - 300px);
+    }
+
+    #slider-arrows {
+        position: fixed;
+        bottom: 0;
+        left: 210px;
+    }
+
+    .introHome-item {
+        position: absolute;
+        left: 0;
+    }
+
+    .carousel-caption {
+        right: 0 !important;
+        padding: 0 !important;
+    }
+
+    .introHome-item >.container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .intro-inner {
+        justify-content: left;
+        align-items: center;
+    }
+
+    .intro-box {
+        width: 395px;
+        padding: 90px 50px 100px 0;
+        text-align: left !important;
+    }
+
+    .nextProject-box {
+        position: absolute;
+        width: 191px;
+        height: 191px;
+        right: 97px;
+        z-index: 500;
+        border: 4px solid #fff;
+        box-shadow: 0 35px 35px rgba(0, 0, 0, 0.64);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nextProject-box > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .nextProject-box-link {
+        position: absolute;
+        width: 95px;
+        height: 52px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #1b1c2e;
+        background-color: white;
+        padding-top: 5px;
+        left: 170px;
+    }
+
+    .nextProject-box-link:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    .nextProject-box-link > span {
+        text-align: center;
+    }
+
+    .nextProject-box-link > span > img {
+        display: block;
+        margin: auto;
+    }
+}
+/* Large devices (desktops, less than 1200px) */
+@media(min-width: 1200px) {
+    .collapse {
+        width: 455px;
+    }
+
+    #slider-arrows {
+        left: 365px;
+    }
+
+    .main {
+        width: calc(100% - 455px);
+    }
+ }
+
+/*  ====================================================        Animations       ======================================================== */
+.animate-nav {
+    animation-name: animate1;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+}
+@keyframes animate1 {
+    0% {
+        width: 30px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.animate-nav-close {
+    animation-name: animate2;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+}
+@keyframes animate2 {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 30px;
+    }
+}
+
+/*  ==================================================================================================================================== */
+
+/*  ==================================================        Gallery Page       ======================================================= */
+
+/*  ==================================================================================================================================== */
+
+.nav-gallery {
+    background-color: white;
+    padding: 80px 30px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-gallery > ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+
+}
+
+.gallery-filter-item {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #898d90;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.gallery-filter-item.active {
+    color: black;
+}
+
+.nav-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+.gallery {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+.column {
+    -ms-flex: 100%; /* IE10 */
+    flex: 100%;
+    max-width: 100%;
+}
+
+
+
+.gallery-item {
+    display: inline;
+    
+}
+
+.gallery-item > img {
+   width: 100%; 
+   height: auto;
+}
+
+/*  ====================================================        Media Query       ======================================================= */
+/* @media (min-width: 550px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: dense !important;
+    }
+} */
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (min-width: 550px) and  (max-width: 1199.98px){
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+
+    #last-gallery-item {
+        -ms-flex: 100%; /* IE10 */
+        flex: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+  }
+
+  @media (min-width: 550px) {
+    .nav-gallery {
+        padding: 30px 180px 20px 30px;
+    }
+  }
+  
+  @media (min-width: 992px){
+    .search-btn.nav-search-gallery{
+        display: flex !important;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 111px;
+        height: 82px;
+    }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (min-width: 1200px){
+    .column {
+      -ms-flex: 33.33333%;
+      flex: 33.33333%;
+      max-width: 33.33333%;
+    }
+  }
+
+
+/*  ==================================================================================================================================== */
+
+/*  ==================================================        Gallery Page       ======================================================= */
+
+/*  ==================================================================================================================================== */
+.singleGallery-main {
+    padding-top: 90px;
+    background: #f7f9fb;
+}
+
+.singleGallery-arrows {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 500;
+    width: 222px;
+    height: 88px !important;
+    margin: -44px auto 50px;
+}
+
+.singleGallery-arrows > .left-arrow {
+    background: white;
+}
+
+.singleGallery-arrows > .right-arrow {
+    background: #323232;
+}
+
+.singleGalllery-text {
+    position: relative;
+}
+
+.carousel.singleGallery-carousel {
+    height: auto;;
+}
+
+.singleGalllery-text-heading > div > span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #898d90;
+}
+
+.singleGalllery-text-heading > div > h1 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.singleGalllery-text-paragraphs > div > p {
+    margin-bottom: 40px;
+    color: #898d90;
+    line-height: 1.8;
+}
+
+.singleGalllery-text-tags {
+    margin-bottom: 50px;
+}
+
+.singleGalllery-text-tags > div > div {
+    margin-bottom: 5px;
+}
+
+.singleGalllery-text-tags > div > div > .col-5 {
+    font-size: 24px;
+    color: #332233;
+    font-weight: 400;
+}
+.singleGalllery-text-tags > div > div > .col-7 {
+    font-size: 16px;
+    color: #000;
+}
+
+/*  ====================================================        Media Query       ======================================================= */
+@media(min-width: 992px) {
+    .singleGallery-main {
+        padding-top: 120px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .singleGallery-main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .singleGallery-carousel-inner {
+        height: auto !important;
+    }
+}
+
+@media (min-width: 1771px){
+    .singleGallery-arrows {
+        margin-right: -111px !important;
+    }
+}
+
+/*  ==================================================================================================================================== */
+
+/*  ==================================================        Blog Page       ======================================================= */
+
+/*  ==================================================================================================================================== */
+.blogPage-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    margin-bottom: 25px;
+}
+
+.blogPage-image-1 {
+    background-image: url("./img/blog/1.jpg");
+}
+.blogPage-image-2 {
+    background-image: url("./img/blog/2.jpg");
+}
+
+.blogPage-date {
+    background: white;
+    height: 89px;
+    width: 89px;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+
+.blogPage-date > span {
+    display: block;
+    font-size: 11px;
+    color: #898d90;
+    font-weight: 700;
+}
+
+.blogPage-date-day {
+    font-size: 48px !important;
+    color: black !important;
+    margin-bottom: -25px;
+}
+
+.singleGalllery-text-heading {
+    margin-bottom: 35px;
+}
+
+.blog-middle-span {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blog-box {
+    padding-bottom: 70px;
+}
+
+.blogPage-main {
+    padding-top: 80px;
+}
+
+/*  ====================================================        Media Query       ======================================================= */
+@media(min-width: 992px) {
+    .blogPage-main {
+        padding-top: 120px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .blogPage-image {
+        height: 477px;
+    }
+}
+
+@media (min-width: 1771px){
+    
+}
+
+
+/*  ==================================================================================================================================== */
+
+/*  ==================================================        Contact Page       ======================================================= */
+
+/*  ==================================================================================================================================== */
+.contactPage-form > div > form > div > input,
+.contactPage-form > div > form > div > textarea {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 0;
+    font-size: 14px;
+    font-style: italic;
+    border: none;
+    margin-bottom: 28px;
+    border-bottom: 2px solid #c5d2df;
+    color: gray;
+}
+
+.contactPage-form > div > form > div > textarea {
+    height: 125px;
+}
+
+.contactPage-form > div > form > button {
+    border: 2px solid #000000;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 28px;
+    letter-spacing: 0.08em;
+    border-radius: 0;
+    color: #323232;
+    cursor: pointer;
+    background: white;
+}
+
+.contactPage-form > div > form > button > span > img {
+    margin-left: 10px;
+}
+
+.contactPage-form {
+    margin-bottom: 85px;
+}
+
+.contactPage-address > div > p {
+    font-size: 15px;
+    color: #332233;
+}
+
+.contactPage-map {
+    width: 100%;
+    margin: 0;
+}
+
+.contactPage-map > div {
+    height: 600px;
+    padding: 0;
+}
+#googleMap {
+    height: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+}
+

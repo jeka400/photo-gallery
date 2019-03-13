@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PhotoGallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+
+    <!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+  </head>
+  <body>
+    <!-- ====================================================     Nav         ========================================================-->
+    <nav class="navBar">
+
+        <a class="search-btn" type="button">
+            <span><img src="./img/search-icon.png" alt="" /></span>
+        </a>
+
+        <div class="navBar-toggler" type="button">
+          <div class="navBar-inner">
+              <div class="bar-inner"></div>
+          </div>
+        </div>
+
+        <div class="collapse hidden" id="navbarNav">
+            <div class="close-btn">
+                <i class="fa fa-times"></i>
+            </div>
+
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" class="brand-img" />
+            </a>
+
+            <div class="collapse-list">
+                <img src="./img/menu-icon.png" alt="" class="menu-icon" />
+
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="singleGallery.html">Single Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" >Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="main">
+        <!-- ====================================================     Slider         ======================================================-->
+        <div id="demo" class="carousel slide" data-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/slider-bg-1.jpg" class="d-block w-100 " alt="">
+                <div class=" introHome-item carousel-caption">
+                    <div class="container">
+                        <div class="row intro-inner ">
+
+                            <div class=" intro-box">
+                                <p class=" text-uppercase">photography</p>
+                                <h1>Project No. 1</h1>
+                                <p>Ut pellentesque auctor lorem, at maximus lacus faucibus nec.
+                                    Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                                    Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla.
+                                    Fusce quis tempor risus, non elemen tum dui. Curabitur et mattis ex, a ultrices.
+                                </p>
+                                <a href="#" class="readMore-link">
+                                    <span class="text-uppercase">Read more </span>
+                                    <span><img src="./img/angle-rignt.png" alt="" /> </span>
+                                </a>
+                            </div>
+
+                            <div class="nextProject-box">
+                                <img src="./img/slider-bg-2.jpg" alt=""/>
+                                <a href="#demo" class="text-center nextProject-box-link" role="button" data-slide="next">
+                                    <span aria-hidden="true">
+                                        <span>Next</span>
+                                        <img src="./img/angle-rignt.png" alt=""/>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+             
+              <div class="carousel-item">
+                <img src="./img/slider-bg-2.jpg" class="d-block w-100" alt="">
+                <div class=" introHome-item carousel-caption">
+                    <div class="container">
+                        <div class="row intro-inner ">
+                            <div class=" intro-box">
+                                <p class="text-uppercase">photography</p>
+                                <h1>Project No. 2</h1>
+                                <p>Ut pellentesque auctor lorem, at maximus lacus faucibus nec.
+                                    Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                                    Mauris auctor nunc non nulla euismod consequat. Pellentesque non mattis nulla.
+                                    Fusce quis tempor risus, non elemen tum dui. Curabitur et mattis ex, a ultrices.
+                                </p>
+                                <a href="#" class="readMore-link">
+                                    <span class="text-uppercase">Read more </span>
+                                    <span><img src="./img/angle-rignt.png" alt="" /> </span>
+                                </a>
+                            </div>
+
+                            <div class="nextProject-box">
+                                <img src="./img/slider-bg-1.jpg" alt=""/>
+                                <a href="#demo" class="text-center nextProject-box-link" role="button" data-slide="next">
+                                    <span aria-hidden="true">
+                                        <span>Next</span>
+                                        <img src="./img/angle-rignt.png" alt=""/>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    
+        <div id="slider-arrows">
+            <a href="#demo" class="left-arrow text-center" role="button" data-slide="prev">
+                <span aria-hidden="true">
+                    <img src="./img/angle-left-w.png" alt=""/>
+                </span> 
+            </a>
+            <a href="#demo" class="right-arrow text-center" role="button" data-slide="next">
+                <span aria-hidden="true">
+                    <img src="./img/angle-rignt.png" alt=""/>
+                </span>
+            </a>
+        </div>
+    
+        <!-- ====================================================     Pagination         ======================================================-->
+        <div class="pagination">
+            <span class="page">0<span class="current" data-current="1">1</span></span>
+            <span class="pages">/0<span class="total" data-total="2"></span>2</span>
+        </div>
+    </section>
+
+
+
+    <!-- ====================================================     Scripts         ========================================================-->
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="./script.js"></script>
+
+    
+  </body>
+</html>

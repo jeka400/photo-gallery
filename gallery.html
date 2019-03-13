@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PhotoGallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+
+    <!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+  </head>
+  <body>
+    <!-- ====================================================     Nav         ========================================================-->
+    <nav class="navBar">
+
+        <a class="search-btn nav-search-gallery" type="button">
+            <span><img src="./img/search-icon.png" alt="" /></span>
+        </a>
+
+        <div class="navBar-toggler" type="button">
+          <div class="navBar-inner">
+              <div class="bar-inner"></div>
+          </div>
+        </div>
+
+        <div class="collapse hidden" id="navbarNav">
+            <div class="close-btn">
+                <i class="fa fa-times"></i>
+            </div>
+
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" class="brand-img" />
+            </a>
+
+            <div class="collapse-list">
+                <img src="./img/menu-icon.png" alt="" class="menu-icon" />
+
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="singleGallery.html">Single Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" >Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" >Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="main">
+        <div class="nav-gallery">
+            <ul>
+                <li class="gallery-filter-item active all">All</li>
+                <li class="gallery-filter-item" id="photography">photography</li>
+                <li class="gallery-filter-item" id="nature">nature</li>
+                <li class="gallery-filter-item" id="love">love</li>
+                <li class="gallery-filter-item" id="animals">animals</li>
+            </ul>
+        </div>
+
+
+        <!-- ================================================     Gallery         ======================================================-->
+        <div class="gallery">
+            <div class="column">
+                <div class="gallery-item animals">
+                    <img src="./img/gallery/1.jpg" alt="" />
+                </div>
+                <div class="gallery-item nature">
+                    <img src="./img/gallery/4.jpg" alt="" />
+                </div>
+            </div>
+            <div class="column">
+                <div class="gallery-item love">
+                    <img src="./img/gallery/2.jpg" alt="" />
+                </div>
+                <div class="gallery-item photography">
+                    <img src="./img/gallery/5.jpg" alt="" />
+                </div>
+            </div>
+            <div class="column" id="last-gallery-item">
+                <div class="gallery-item nature">
+                    <img src="./img/gallery/3.jpg" alt="" />
+                </div>
+                <div class="gallery-item photography">
+                    <img src="./img/gallery/6.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ====================================================     Scripts         ========================================================-->
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="./script.js"></script>
+
+  </body>
+</html>
